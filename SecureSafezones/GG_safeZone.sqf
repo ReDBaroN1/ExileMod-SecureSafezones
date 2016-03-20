@@ -69,7 +69,7 @@ else
 						ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true]; _vehicleOwner = player;
 					} else {
 						if !(player in _ownerGroup) then {
-							cutText [format['%1, This is an abondoned vehicle. Enter in the driver/pilot seat to claim this vehicle.',name player],'PLAIN'];
+							cutText [format['SECURESAFEZONES: %1, This is an abondoned vehicle. Enter in the driver/pilot seat to claim this vehicle.',name player],'PLAIN'];
 							player action ['getOut', ExileClientSafeZoneVehicle];
 						};
 					};
@@ -79,7 +79,7 @@ else
 					["Whoops", ["Cannot Enter This Vehicle"]] call ExileClient_gui_notification_event_addNotification;
 					player action ['getOut', ExileClientSafeZoneVehicle];
 					disableUserInput true;
-					cutText ["YOU DO NOT OWN THIS VEHICLE !","WHITE IN", 5];
+					cutText ["SECURESAFEZONES: YOU DO NOT OWN THIS VEHICLE !","WHITE IN", 5];
 					uiSleep GG_vehiclePenalty;
 					disableUserInput false;
 				};
