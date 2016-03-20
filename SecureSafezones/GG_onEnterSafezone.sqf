@@ -51,6 +51,5 @@ if !(_vehicle isEqualTo player) then
 };
 ExileClientSafeZoneESPEventHandler = addMissionEventHandler ["Draw3D", {20 call ExileClient_gui_safezone_safeESP}];
 ["SafezoneEnter"] call ExileClient_gui_notification_event_addNotification;
-['Beware of thieves, protect your vehicles!',0,0.6,2,0] spawn bis_fnc_dynamictext;
 ExileClientSafeZoneUpdateThreadHandle = [1, ExileClient_object_player_thread_safeZone, [], true] call ExileClient_system_thread_addtask;
 true
