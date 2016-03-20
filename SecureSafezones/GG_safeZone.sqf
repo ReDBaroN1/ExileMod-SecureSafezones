@@ -21,25 +21,6 @@ if (_vehicle isEqualTo player) then
 		ExileClientSafeZoneVehicle = objNull;
 		ExileClientSafeZoneVehicleFiredEventHandler = nil;
 	};
-
-	// GR8's Anti Steal
-	if (GG_gearSteal) then {
-		_friends = units group player;
-		_near = [];
-		_around = player nearEntities [['LandVehicle','Air','ship'],GG_blockRadius];_near = [];
-		{if (player distance _x < ((sizeOf typeOf _x)/2) + 3) then {_near = _near + [_x];};} forEach _around;
-		_countNear = count _near;
-		_countNearMine = {
-			_owner = _x getVariable ['GR8owner',objNull];
-			_owner in _friends
-		} count _near;
-		if (_countNear > _countNearMine && !isNull findDisplay 602) then {
-			(findDisplay 602) closedisplay 0;
-			closeDialog 0;closeDialog 0;closeDialog 0;
-			["Whoops", ["Cannot access gear! You are near another player's vehicle."]] call ExileClient_gui_notification_event_addNotification;
-		};
-	};
-	// GR8's Anti Steal
 }
 else 
 {

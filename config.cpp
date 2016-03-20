@@ -8,4 +8,5 @@ class CfgExileCustomCode
     ExileClient_object_player_event_onEnterSafezone = 		"SecureSafezones\GG_onEnterSafezone.sqf";
     ExileClient_object_player_event_onLeaveSafezone = 		"SecureSafezones\GG_onLeaveSafezone.sqf";
     ExileServer_system_trading_network_wasteDumpRequest = 	"SecureSafezones\GG_wasteDumpRequest.sqf";
+    ExileClient_object_player_event_onInventoryOpened = 	"SecureSafezones\GG_onInventoryOpened.sqf";
 };
