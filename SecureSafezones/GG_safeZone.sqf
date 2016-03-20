@@ -23,10 +23,10 @@ if (_vehicle isEqualTo player) then
 	};
 
 	// GR8's Anti Steal
-	if (gearSteal) then {
+	if (GG_gearSteal) then {
 		_friends = units group player;
 		_near = [];
-		_around = player nearEntities [['LandVehicle','Air','ship'],blockRadius];_near = [];
+		_around = player nearEntities [['LandVehicle','Air','ship'],GG_blockRadius];_near = [];
 		{if (player distance _x < ((sizeOf typeOf _x)/2) + 3) then {_near = _near + [_x];};} forEach _around;
 		_countNear = count _near;
 		_countNearMine = {
@@ -59,12 +59,12 @@ else
 		ExileClientSafeZoneVehicleFiredEventHandler = _vehicle addEventHandler ["Fired", {_this call ExileClient_object_player_event_onFiredSafeZoneVehicle}];
 
 		// GR8's Anti Steal
-		if (vehicleSteal) then {
+		if (GG_vehicleSteal) then {
 			_playerDriver = player == driver ExileClientSafeZoneVehicle;
 			_vehicleOwner = ExileClientSafeZoneVehicle getVariable ['GR8owner', objNull];
-			if (vehicleGroup) then {_ownerGroup = units group _vehicleOwner;} else {_ownerGroup = _vehicleOwner;};
+			if (GG_vehicleGroup) then {_ownerGroup = units group _vehicleOwner;} else {_ownerGroup = _vehicleOwner;};
 			if (isNull _vehicleOwner) then {
-				if (vehicleClaim) then {
+				if (GG_vehicleClaim) then {
 					if (_playerDriver) then {
 						ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true]; _vehicleOwner = player;
 					} else {
@@ -80,7 +80,7 @@ else
 					player action ['getOut', ExileClientSafeZoneVehicle];
 					disableUserInput true;
 					cutText ["YOU DO NOT OWN THIS VEHICLE !","WHITE IN", 5];
-					uiSleep vehiclePenalty;
+					uiSleep GG_vehiclePenalty;
 					disableUserInput false;
 				};
 			};

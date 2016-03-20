@@ -43,7 +43,7 @@ if !(_vehicle isEqualTo player) then
 	};
 	ExileClientSafeZoneVehicle = _vehicle;
 	 // GR8's Anti Steal
-	if ((player == driver ExileClientSafeZoneVehicle) && (vehicleEnter)) then {
+	if ((player == driver ExileClientSafeZoneVehicle) && (GG_vehicleEnter)) then {
 		ExileClientSafeZoneVehicle setVariable ['GR8owner', player, true];
 	};
 	 // GR8's Anti Steal

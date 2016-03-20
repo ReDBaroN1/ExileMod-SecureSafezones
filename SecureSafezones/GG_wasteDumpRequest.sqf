@@ -38,7 +38,7 @@ try
 	};
 	_vehicleOwner = _vehicleObject getVariable ['GR8owner', objNull];
 	_ownerGroup = units group _vehicleOwner;
-	if ((vehicleDump) && !(_playerObject in _ownerGroup)) then {
+	if ((GG_vehicleDump) && !(_playerObject in _ownerGroup)) then {
 		throw 6;
 	};
 	if !((owner _vehicleObject) isEqualTo (owner _playerObject)) then
