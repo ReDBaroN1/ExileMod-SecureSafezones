@@ -38,6 +38,6 @@ ExileServer_system_trading_network_wasteDumpRequest = 	"SecureSafezones\GG_waste
 setVariable.txt
 scripts.txt
 
-### BattlEye Filters ###
+### Credits ###
 
 Thank you [†RiH† StokesMagee](http://www.exilemod.com/profile/52663-%E2%80%A0rih%E2%80%A0-stokesmagee/) for helping and testing this script.
