@@ -1,30 +1,30 @@
 # Secure Safezones For ExileMod - [Download](https://github.com/Gr8z/ExileMod-SecureSafezones/archive/master.zip)
-This script is made to ensure your full safety in a safezone by stopping other people to steal your vehicle and/or its contents. Fully customizable and easy to install, this should hopefully remove the big hassle of having an admin punishing safezone theifs all the time and make this process automated.
+Данный скрипт сделан для полной вашей безопасности в safezone, не давая другим игрокам украсть Ваш автомобиль  либо его содержимое. Полностью настраиваемый и простой в установке .
 
-All these features below you can enable/disable :
+Все эти функции ниже вы можете вкл/отк :
 
-- Kicks out all players outside your group from your vehicle.
-- Players outside your group won't be able to check the gear.
-- Players outside your group won't be able to sell your vehicle.
-- Get in the driver's seat to claim ownership.
+- Выкидывает всех игроков из транспорта, если они не в вашей группе.
+- Игроков не из вашей группы не сможет проверить инвентарь.
+- Игроков не из вашей группы не сможет продать ваш транспорт.
 
-### Install Intructions ###
 
-- Add this at the end of your **initPlayerLocal.sqf** in your missions PBO.
+### Установка ###
+
+- Добавьте это в конец вашего **initPlayerLocal.sqf** в вашей миссии PBO.
 ```
 // Secure Safezones by Gr8
 [] execVM "SecureSafezones\config.sqf";
 ```
 
-- Copy the **SecureSafezones** folder in your Mission PBO.
+- Скопировать **SecureSafezones** в папку в вашей миссии PBO.
 
-- Open **config.cpp** in your mission file.
-- Look for:
+- Открыть **config.cpp** в файле миссии.
+- Искать:
 ```
 class CfgExileCustomCode
 {
 ```
-- Add this Below:
+- Добавить:
 ```
 ExileClient_object_player_thread_safeZone = 			"SecureSafezones\GG_safeZone.sqf";
 ExileClient_object_player_event_onEnterSafezone = 		"SecureSafezones\GG_onEnterSafezone.sqf";
@@ -34,11 +34,11 @@ ExileClient_object_player_event_onInventoryOpened = 	"SecureSafezones\GG_onInven
 ```
 
 
-### BattlEye Filters ###
+### BattlEye Фильтры ###
 
 - setVariable.txt
 - scripts.txt
 
 ### Credits ###
 
-Thank you [†RiH† StokesMagee](http://www.exilemod.com/profile/52663-%E2%80%A0rih%E2%80%A0-stokesmagee/) for helping and testing this script.
+Спасибо [†RiH† StokesMagee](http://www.exilemod.com/profile/52663-%E2%80%A0rih%E2%80%A0-stokesmagee/) за помощь и тестирование этого сценария.
